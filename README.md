@@ -2,7 +2,8 @@
 
 LocalFlix, kendi bilgisayarınızdaki film arşivinizi Netflix tarzı modern bir arayüzle izlemenizi sağlayan, açık kaynaklı bir video oynatıcıdır.
 
-![LocalFlix Preview](docs/preview.png)
+<img width="1890" height="1079" alt="image" src="https://github.com/user-attachments/assets/bd2a81f1-701f-47d6-978c-16b46bbd67b2" />
+
 
 ## ✨ Özellikler
 
