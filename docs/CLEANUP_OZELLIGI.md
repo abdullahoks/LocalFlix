@@ -12,7 +12,7 @@ Header'da yeni bir **"Cleanup"** butonu eklendi.
 ## 🚀 Nasıl Kullanılır?
 
 ### Senaryo 1: Veritabanını Sıfırlamak
-1. Netflix Player'ı açın (http://localhost:5000)
+1. Netflix Player'ı açın (http://localhost:5000)2
 2. Üst menüde **"Cleanup"** butonuna tıklayın
 3. Sistem otomatik olarak:
    - Veritabanındaki **TÜM** filmleri siler

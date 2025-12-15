@@ -26,7 +26,7 @@ Repo oluşturulduktan sonra karşınıza çıkan sayfada **"…or push an existi
 Kodlar şuna benzer olacaktır (kendi kullanıcı adınızı dikkate alın):
 
 ```bash
-git remote add origin https://github.com/KULLANICI_ADINIZ/LocalFlix.git
+git remote add origin https://github.com/abdullahoks/LocalFlix.git
 git branch -M main
 git push -u origin main
 ```
