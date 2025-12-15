@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalFlix - Your Personal Movie Library</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>Local<span class="logo-accent">Flix</span></h1>
+            </div>
+            <nav class="nav">
+                <button class="nav-btn active" data-category="all">Home</button>
+                <button class="nav-btn" id="scanBtn">Scan Movies</button>
+                <button class="nav-btn" id="cleanupBtn">Cleanup</button>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search movies..." class="search-input">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="heroSection">
+        <div class="hero-content">
+            <h2 class="hero-title" id="heroTitle">Welcome to Your Movie Library</h2>
+            <p class="hero-description" id="heroDescription">
+                Your personal Netflix-style video player. Click "Scan Movies" to get started.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" id="heroPlayBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
+                    Play
+                </button>
+                <button class="btn btn-secondary" id="heroInfoBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    More Info
+                </button>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Movie Categories -->
+    <main class="main-content">
+        <div id="categoriesContainer"></div>
+
+        <!-- Loading State -->
+        <div id="loadingState" class="loading-state">
+            <div class="spinner"></div>
+            <p>Loading your movies...</p>
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="empty-state" style="display: none;">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+                <polyline points="17 2 12 7 7 2"></polyline>
+            </svg>
+            <h2>No Movies Found</h2>
+            <p>Click "Scan Movies" to add videos from your local folder</p>
+            <button class="btn btn-primary" onclick="document.getElementById('scanBtn').click()">Scan Now</button>
+        </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

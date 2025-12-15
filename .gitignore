@@ -1,0 +1,18 @@
+# Visual Studio Code
+.vscode/
+
+# .NET Core
+bin/
+obj/
+*.db
+*.db-shm
+*.db-wal
+appsettings.Development.json
+movies.db
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db

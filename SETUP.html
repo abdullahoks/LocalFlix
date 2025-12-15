@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Instructions - Netflix Player</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #E50914;
+            border-bottom: 3px solid #E50914;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 30px;
+        }
+
+        .step {
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #E50914;
+            border-radius: 4px;
+        }
+
+        code {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .success {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎬 Netflix Player - Setup Instructions</h1>
+
+        <p>Welcome! Follow these steps to set up your local Netflix-style video player.</p>
+
+        <h2>📋 Prerequisites</h2>
+        <div class="step">
+            <strong>Required:</strong>
+            <ul>
+                <li>.NET 8.0 SDK or later</li>
+                <li>Modern web browser (Chrome, Firefox, Edge)</li>
+                <li>Video files (.mp4, .mkv, .webm, .avi, .mov)</li>
+            </ul>
+        </div>
+
+        <h2>🚀 Step 1: Install .NET SDK</h2>
+        <div class="step">
+            <p>If you don't have .NET SDK installed:</p>
+            <ol>
+                <li>Visit <a href="https://dotnet.microsoft.com/download"
+                        target="_blank">https://dotnet.microsoft.com/download</a></li>
+                <li>Download and install .NET 8.0 SDK</li>
+                <li>Verify installation by opening terminal and running:</li>
+            </ol>
+            <div class="code-block">dotnet --version</div>
+            <p>You should see version 8.0 or higher.</p>
+        </div>
+
+        <h2>📁 Step 2: Organize Your Movies</h2>
+        <div class="step">
+            <p>Create a folder structure like this:</p>
+            <div class="code-block">C:\Movies\
+                ├── Action\
+                │ ├── movie1.mp4
+                │ └── movie1.srt
+                ├── Comedy\
+                │ └── movie2.mp4
+                └── Drama\
+                └── movie3.mp4</div>
+            <p><strong>Tips:</strong></p>
+            <ul>
+                <li>Organize by genre/category using folders</li>
+                <li>Place .srt subtitle files with same name as video</li>
+                <li>Add cover images (movie.jpg) for better visuals</li>
+            </ul>
+        </div>
+
+        <h2>⚙️ Step 3: Configure the Application</h2>
+        <div class="step">
+            <p>Open <code>NetflixPlayer/appsettings.json</code> and update the movie folder path:</p>
+            <div class="code-block">{
+                "MovieSettings": {
+                "FolderPath": "C:\\Movies"
+                }
+                }</div>
+            <div class="warning">
+                <strong>⚠️ Important:</strong> Use double backslashes (\\) in Windows paths!
+            </div>
+        </div>
+
+        <h2>▶️ Step 4: Run the Application</h2>
+        <div class="step">
+            <p>Open terminal in the NetflixPlayer folder and run:</p>
+            <div class="code-block">cd NetflixPlayer
+                dotnet restore
+                dotnet run</div>
+            <p>The application will start at <code>http://localhost:5000</code></p>
+        </div>
+
+        <h2>🎯 Step 5: Scan Your Movies</h2>
+        <div class="step">
+            <ol>
+                <li>Open browser and go to <code>http://localhost:5000</code></li>
+                <li>Click the <strong>"Scan Movies"</strong> button in the header</li>
+                <li>Wait for the scan to complete</li>
+                <li>Your movies will appear organized by category!</li>
+            </ol>
+        </div>
+
+        <div class="success">
+            <strong>✅ You're all set!</strong> Click on any movie to start watching. Enjoy your personal Netflix-style
+            movie library!
+        </div>
+
+        <h2>⌨️ Keyboard Shortcuts</h2>
+        <div class="step">
+            <ul>
+                <li><code>Space</code> or <code>K</code> - Play/Pause</li>
+                <li><code>F</code> - Fullscreen</li>
+                <li><code>M</code> - Mute/Unmute</li>
+                <li><code>C</code> - Toggle Subtitles</li>
+                <li><code>Arrow Left/Right</code> - Seek 10 seconds</li>
+                <li><code>Arrow Up/Down</code> - Volume control</li>
+            </ul>
+        </div>
+
+        <h2>🐛 Troubleshooting</h2>
+        <div class="step">
+            <p><strong>Movies not showing?</strong></p>
+            <ul>
+                <li>Check folder path in appsettings.json</li>
+                <li>Ensure videos have supported extensions</li>
+                <li>Click "Scan Movies" again</li>
+            </ul>
+
+            <p><strong>Video won't play?</strong></p>
+            <ul>
+                <li>MKV files may need conversion to MP4</li>
+                <li>Ensure H.264 codec for MP4 files</li>
+            </ul>
+
+            <p><strong>Subtitles not working?</strong></p>
+            <ul>
+                <li>File must be named same as video (movie.mp4 → movie.srt)</li>
+                <li>Only .srt format supported</li>
+                <li>Use UTF-8 encoding</li>
+            </ul>
+        </div>
+
+        <p style="text-align: center; margin-top: 40px; color: #666;">
+            Made with ❤️ for movie lovers
+        </p>
+    </div>
+</body>
+
+</html>

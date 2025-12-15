@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player - LocalFlix</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://vjs.zencdn.net/8.6.1/video-js.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="player-page">
+    <div class="player-container">
+        <!-- Back Button -->
+        <button class="back-btn" onclick="window.history.back()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back
+        </button>
+
+        <!-- Logo Overlay (Netflix Style) -->
+        <div class="player-logo-overlay">
+            <span style="color: #E50914; font-weight: 700; font-size: 24px; letter-spacing: 1px;">LocalFlix</span>
+        </div>
+
+        <!-- Video Player -->
+        <video id="videoPlayer" class="video-js vjs-big-play-centered" controls preload="auto" width="100%"
+            height="100%" data-setup='{"fluid": true}'>
+        </video>
+
+        <!-- Custom Controls Overlay (Top Right Info) -->
+        <div class="player-controls-overlay" id="controlsOverlay">
+            <div class="movie-info">
+                <h2 id="movieTitle">Movie Title</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
+    <script src="js/player.js"></script>
+</body>
+
+</html>
